@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+    <script type="text/javascript">
+        $tab = {
+          "key1" : "value1",
+            "key2" : {
+                "subkey1" : "subval1",
+                "subkey2" : "subval2",
+            },
+        };
+        for(var i in $tab){
+            if(typeof($tab[i]) == "object"){
+                $t = $tab[i];
+                for(var j in $t){
+                    alert(Object.keys($t));
+                }
+            }else{
+                alert($tab[i]);
+            }
+        }
+    </script>
+</body>
+</html>
